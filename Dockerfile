@@ -9,7 +9,11 @@ RUN apk --update --no-cache add \
     jq \
     bash \
     git \
+    curl \
+    nodejs \
+    nodejs-npm \
     && pip install --no-cache-dir awscli==$AWS_CLI_VERSION \
+    && npm install -g yarn \
     && apk del py-pip \
     && rm -rf /var/cache/apk/* /root/.cache/pip/* /usr/lib/python2.7/site-packages/awscli/examples
 
