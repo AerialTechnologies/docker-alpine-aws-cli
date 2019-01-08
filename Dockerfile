@@ -12,6 +12,8 @@ RUN apk --update --no-cache add \
     curl \
     nodejs \
     nodejs-npm \
+    groff \
+    less \
     && pip install --no-cache-dir awscli==$AWS_CLI_VERSION \
     && npm install -g yarn \
     && apk del py-pip \
