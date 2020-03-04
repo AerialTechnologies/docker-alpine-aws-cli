@@ -1,7 +1,7 @@
-# Alpine 3.10.3 is current latest
-FROM alpine:3.10.3
+# Alpine 3.11.3 is current latest
+FROM alpine:3.11.3
 
-ENV AWS_CLI_VERSION=1.16.264
+ENV AWS_CLI_VERSION=1.18.13
 
 RUN apk --update --no-cache add \
     python \
@@ -14,6 +14,7 @@ RUN apk --update --no-cache add \
     nodejs-npm \
     groff \
     less \
+    alpine-sdk \
     && pip install --no-cache-dir awscli==$AWS_CLI_VERSION \
     && npm install -g yarn \
     && apk del py-pip \
