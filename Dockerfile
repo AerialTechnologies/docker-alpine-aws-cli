@@ -45,7 +45,8 @@ RUN apk --update --no-cache add \
     npm \
     groff \
     less \
-    && npm install -g yarn
+    && npm install -g yarn \
+    && helm plugin install https://github.com/hypnoglow/helm-s3.git
 
 # Expose .aws to mount config/credentials
 VOLUME /root/.aws
