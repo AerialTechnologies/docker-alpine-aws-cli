@@ -35,17 +35,7 @@ COPY --from=builder /usr/local/aws-cli/ /usr/local/aws-cli/
 COPY --from=builder /aws-cli-bin/ /usr/local/bin/
 COPY --from=builder /usr/bin/helm /usr/bin/
 
-RUN apk --update --no-cache add \
-    python \
-    jq \
-    bash \
-    git \
-    curl \
-    nodejs \
-    npm \
-    groff \
-    less \
-    && npm install -g yarn \
+RUN apk add --no-cache git bash \
     && helm plugin install https://github.com/hypnoglow/helm-s3.git
 
 # Expose .aws to mount config/credentials
