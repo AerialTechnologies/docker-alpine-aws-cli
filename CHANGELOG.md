@@ -15,14 +15,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Upgraded AWS-CLI to version 2
-- Upgrade alpine base version to 3.17
+- Upgraded AWS-CLI to version from v1 to v2
+- Upgrade alpine base version from 3.10 to 3.17
 - Accept alpine version as build argument
-- Dockerfile layout to mustistage to raduce final image size
+- Dockerfile layout to multistage to reduce final image size
 
 ### Removed
 
-- Unused toos (python, jq, npm, less, bash)
+- Unused tools (python, jq, npm, less, bash)
 
 ## [1.0.0] - 2010-10-23
 
